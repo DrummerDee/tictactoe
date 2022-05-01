@@ -1,0 +1,73 @@
+html{
+    background-color: #eee;
+}
+h1{
+    text-align: center;
+}
+.container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://thumbs.gfycat.com/AffectionateDearIcelandicsheepdog-mobile.mp4');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+/* customs for button */
+button {
+    border-radius: -2%;
+    border: 2px solid black;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background: yellow;
+    color: white;
+  }
+
+  /*customs for the board */
+  .board {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: auto auto auto;
+  }
+  .block {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 3px solid white;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .block:hover {
+    cursor: pointer;
+    background: yellow;
+  }
+.footer{
+   text-align: center;
+}
+/* to rid of the lines around the border */
+#num1,#num2,#num3{
+    border-top:none;
+}
+#num1,#num4,#num7{
+    border-left:none;
+}
+#num7,#num8,#num9{
+    border-bottom:none;
+}
+#num3,#num6,#num9{
+    border-right:none;
+}
