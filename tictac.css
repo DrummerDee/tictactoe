@@ -5,12 +5,12 @@ h1{
     text-align: center;
 }
 .container {
-    min-height: 60vh;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('https://thumbs.gfycat.com/AffectionateDearIcelandicsheepdog-mobile.mp4');
+    background-image: url('https://images.unsplash.com/photo-1498736297812-3a08021f206f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=879&q=80');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -54,6 +54,8 @@ button {
   .block:hover {
     cursor: pointer;
     background: yellow;
+    
+    
   }
 .footer{
    text-align: center;
