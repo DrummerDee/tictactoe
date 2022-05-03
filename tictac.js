@@ -37,7 +37,7 @@ function youWin(){
     winnerCombos.forEach(function(combo){
         let check = combo.every(i => block[i].innerText.trim() == currentPlayer)
         if(check){
-            aler(currentPlayer + ' is the winner')
+            alert(currentPlayer + ' is the winner')
         }
     }) 
    }
