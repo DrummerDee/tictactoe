@@ -15,6 +15,38 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
   }
+    /*customs for the board */
+    .board {
+      display: grid;
+      width: 300px;
+      height: 300px;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(3,1fr);
+    }
+    .block {
+      border-bottom: 5px solid white;
+      border-right: 5px solid white;
+      display: flex;
+      width: 100px;
+      height: 100px;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+    }
+    .block:nth-child(3n){
+      border-right: none;
+    }
+    .block:nth-child(n+7){
+      border-bottom: none;
+    }
+    
+    .block:hover {
+      cursor: pointer;
+      background: yellow;
+      transition: background 0.2s ease-in-out;
+    }
 /* customs for button */
 button {
     border-radius: -2%;
@@ -31,45 +63,13 @@ button {
     background: yellow;
     color: white;
   }
+/* marker to tell winner that they won 
+.block.highlight{
 
-  /*customs for the board */
-  .board {
-    display: grid;
-    width: 300px;
-    height: 300px;
-    grid-template-columns: auto auto auto;
-  }
-  .block {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
-    border: 3px solid white;
-    transition: background 0.2s ease-in-out;
-  }
+}
   
-  .block:hover {
-    cursor: pointer;
-    background: yellow;
-    
-    
-  }
+  /* if the player isnt able to place a character*/
+  
 .footer{
    text-align: center;
-}
-/* to rid of the lines around the border */
-#num1,#num2,#num3{
-    border-top:none;
-}
-#num1,#num4,#num7{
-    border-left:none;
-}
-#num7,#num8,#num9{
-    border-bottom:none;
-}
-#num3,#num6,#num9{
-    border-right:none;
 }
