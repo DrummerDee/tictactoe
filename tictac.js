@@ -1,5 +1,5 @@
 const statusOfGame = document.querySelector('.game--stat');
-
+const block = document.querySelectorAll('.block')
 const board = new Array(9).fill(null)
 let currentPlayer = "X";
 let gameOn = true;
@@ -22,11 +22,20 @@ let winnerCombos = [
     [2,4,6],
 ];
 
-let block = document.querySelectorAll('.block')
 //convert node list to array//
 //block = Array.from(block)
 
+let i= 0;
+while (!check){
+//click boxes, switch player//
+const spaceClicked = (e) => {
+    const id = e.target.id;
+e.target.innerText = currentPlayer;
+
+currentPlayer = (currentPlayer === X) ? O : X;
+};
 // smurf for clicked space //
+//block.forEach(block) => block.addEventListener('click',spaceClicked)
 block.forEach(function(block){
     block.addEventListener('click', function(){
         if(block.innerText.trim() != "") return 
@@ -45,9 +54,7 @@ function youWin(){
             alert(currentPlayer + ' is the winner')
         }
     }
-}
-
 // smurf for tie//
 
 
-//smurf for play again //
+//smurf for play again /
