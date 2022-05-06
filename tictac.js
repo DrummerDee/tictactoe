@@ -54,7 +54,3 @@ function youWin(){
             alert(currentPlayer + ' is the winner')
         }
     }
-// smurf for tie//
-
-
-//smurf for play again /
