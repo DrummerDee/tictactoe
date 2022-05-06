@@ -1,10 +1,16 @@
-let board;
-//let player1 = "O";
-//et player2 = "X";
-let currentPlayer = "X";
-let gameOver = false;
-//winner combos //
+const statusOfGame = document.querySelector('.game--stat');
 
+const board = new Array(9).fill(null)
+let currentPlayer = "X";
+let gameOn = true;
+
+const winText = () => `Player ${currentPlayer} has won!`;
+const tieText = () => 'Its a tie!! Try Again?'
+const currentPlayerTurn = () => ` It's ${currentPlayer}'s turn` 
+
+statusOfGame.innerHTML = currentPlayerTurn();
+
+//winner combos //
 let winnerCombos = [
     [0,1,2],
     [3,4,5],
@@ -14,13 +20,13 @@ let winnerCombos = [
     [2,5,8],
     [0,4,8],
     [2,4,6],
-]
+];
 
 let block = document.querySelectorAll('.block')
-// convert node list to array //
-block = Array.from(block)
+//convert node list to array//
+//block = Array.from(block)
 
-// click event for block //
+// smurf for clicked space //
 block.forEach(function(block){
     block.addEventListener('click', function(){
         if(block.innerText.trim() != "") return 
@@ -31,24 +37,17 @@ block.forEach(function(block){
     })
 })
 
-//check for winner //
+//smurf for winner //
 function youWin(){
-    //loop for all winning combos//
     winnerCombos.forEach(function(combo){
         let check = combo.every(i => block[i].innerText.trim() == currentPlayer)
         if(check){
             alert(currentPlayer + ' is the winner')
         }
-    }) 
-   }
-   // check to see if there is a tie //
+    }
+}
+
+// smurf for tie//
 
 
-
-   //function for when I want to mark through the x and/or os//
-//function hightlightBlock(combo){
-    //combo.forEach(function(i){
-       // block(i).classList.add("highlight")
-    //}
-//}
-
+//smurf for play again //

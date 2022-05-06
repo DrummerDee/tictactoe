@@ -45,7 +45,7 @@ h1{
     .block:hover {
       cursor: pointer;
       background: yellow;
-      transition: background 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
     }
 /* customs for button */
 button {
@@ -63,6 +63,23 @@ button {
     background: yellow;
     color: white;
   }
+
+  /* game status details */
+  .game--stat{
+
+  background-color: rgb(218, 108, 108);
+  width: 300px;
+  height: 50px;
+  font-size: 25px;
+  color: white;
+  box-shadow: 2px 2px 2px 2px yellow;
+  border: 2px solid white;
+  margin: 10px 25% 10px 38%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 2%;
+  }
 /* marker to tell winner that they won 
 .block.highlight{
 
@@ -72,4 +89,5 @@ button {
   
 .footer{
    text-align: center;
+   margin-top: 2%;
 }
