@@ -64,7 +64,7 @@ button {
     color: white;
   }
 
-  /* game status details */
+  /* game status details 
   .game--stat{
 
   background-color: rgb(218, 108, 108);
@@ -91,3 +91,5 @@ button {
    text-align: center;
    margin-top: 2%;
 }
+
+
