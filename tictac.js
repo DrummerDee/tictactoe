@@ -42,7 +42,7 @@ function youWin(){
     winnerCombos.forEach(function(combo){
         let check = combo.every(i => block[i].innerText == currentPlayer)
         if(check){
-            alert(currentPlayer + ' is the winner');
+            window.alert(currentPlayer + ' is the winner');
             return gameOver();
         }
     })
@@ -66,3 +66,4 @@ function playAgain(){
         block.innerHTML = ""
     })
 }
+
