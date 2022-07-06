@@ -1,0 +1,3 @@
+Checking each individual block to track when a character clicks 
+looping through possible combinations to see if they match a winning combo
+removeevent listener to prevent user from clicking after match has been won or tied 
